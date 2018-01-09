@@ -4,8 +4,8 @@ var userName = prompt("Welcome! Please enter your name.");
 confirm("Hello " + userName + ". Please answer all questions with y/n or yes/no." +
 " Several questions will be asked to find more about me.");
 
-var resultOlympian = (prompt("Have you met an Olympian before?"));
-if(resultOlympian.toLowerCase() === 'y' || resultOlympian.toLowerCase() === 'yes')
+var resultOlympian = prompt("Have you met an Olympian before?").toLowerCase();
+if(resultOlympian === 'y' || resultOlympian === 'yes')
 {
     confirm("You said you have met an Olympican before." +
     " I am a member of Pueget Sound Ice Skating Club and" +
