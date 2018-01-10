@@ -47,7 +47,7 @@ else
     //Question 3_1
     var resultSpecificLanguage = prompt("You said no. Could you tell me if you're looking for a programmer specializing" +
     " in other than C# or python? Please answer y/n or yes/no.").toLowerCase();
-    if(resultSpecificLanguage === 'y' || 'yes')
+    if(resultSpecificLanguage === 'y' || resultSpecificLanguage === 'yes')
     {
         confirm("You said yes. Currently my language skills are limited only to C# and python.");
     }
@@ -55,5 +55,19 @@ else
     {
         confirm("You said no. Great. I am a full stack web programmer in C# and Python.");
     }
+}
+
+//Question 4
+var resultYears = prompt("Are you looking for a programmer with more than" +
+"3 years of experience?").toLowerCase();
+if(resultYears === 'y' || resultYears === 'yes')
+{
+    confirm("I am sorry to hear that. I am looking for a junior programmer position.");
+
+}
+else
+{
+    confirm("Great. I am looking for a junior programmer level position.");
+
 }
 
