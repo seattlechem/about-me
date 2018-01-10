@@ -80,3 +80,25 @@ else
 {
     alert("Yes. It's hard for me to imagine eating only vegetable.");
 }
+
+//Question 6
+//guessing game which takes numeric input
+var chance = 0;
+while(chance <4)
+{
+    var resultGuess = parseInt(prompt("Can you gess what is the last number of my 5-digit zip code? Please answer only with numbers from 0 to 9"));
+    
+    if(resultGuess ===6)
+    {
+        alert("Great. You got it right! The last number is 6");
+        break;
+    }
+    else
+    {
+        chance++
+        var chancesleft = 4-chance;
+        alert("Sorry. You have " + chancesleft + " left.");
+        
+    }
+
+}
