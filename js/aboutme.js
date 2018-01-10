@@ -71,3 +71,16 @@ else
 
 }
 
+//Question 5
+var resultIntership = prompt("Does your company has an internship program?").toLowerCase();
+if(resultIntership === 'y' || resultIntership === 'yes')
+{
+    confirm("Great. Thank you for the information. I am also looking for an intership" +
+    " opportunity as well.");
+}
+else
+{
+    confirm("I have less than 2 years of experience in coding. Maybe an intership" +
+    " is a great opportunity to prove my ability if you're looking for" +
+    " more experienced programmers.");
+}
