@@ -1,86 +1,82 @@
 'use strict'
 
 var userName = prompt("Welcome! Please enter your name.");
-confirm("Hello " + userName + ". Please answer all questions with y/n or yes/no." +
+alert("Hello " + userName + ". Please answer all questions with y/n or yes/no." +
 " Several questions will be asked to find more about me.");
 
 //Question 1
-var resultOlympian = prompt("Have you met an Olympian before?").toLowerCase();
+var resultOlympian = prompt("Do you think I met an Olympian before?").toLowerCase();
+console.log("User selected: " + resultOlympian);
+
 if(resultOlympian === 'y' || resultOlympian === 'yes')
 {
-    confirm("You said you have met an Olympican before." +
-    " I am a member of Pueget Sound Ice Skating Club and" +
+    alert("I am a member of Pueget Sound Ice Skating Club and" +
     " Several famous Olympians have trained in our club" +
     "including J. R. Celski and Apolo Ohno.");
 }
 else
 {
-    confirm("You said no. I have been training everyweekends for" +
+    alert("You said no. I have been training everyweekends for" +
     " 2 hours on ice and 2 hours on dryland. Our ice skating club" +
     " has produced two former/current Olympian: J. R. Celski and Apolo Ohno");
 }
 
 //Question 2
-var resultInterest = prompt("Are you looking for a programmer who has" +
-" science background?").toLowerCase();
+var resultInterest = prompt("Do you think I ever compete in alpine ski racing before?").toLowerCase();
+console.log("User selected: " + resultInterest);
+
 if(resultInterest === 'y' || resultInterest === 'yes')
 {
-    confirm("You said yes. I have background in science and I am very interested in" +
-    " how to interpretate data using python language.");
+    alert("I was a downhill skier representing my hometown province in Korea.");
 }
 else
 {
-    confirm("You said no. I have background in science, but I am also a full stack developer" +
-    " specializing in C# and Python languages.");
+    alert("I started skiing since I was seven years old.");
 }
 
 //Question 3
-var resultProject = prompt("Are you looking for a programmer who knows" +
-" several languages?").toLowerCase();
+var resultProject = prompt("Have you ever lived in New Mexico?").toLowerCase();
+console.log("User selected: " + resultProject);
+
 if(resultProject === 'y' || resultProject === 'yes')
 {
-    confirm("You said yes. I have completed several full stack web projects using Python" +
-    " Django and C# Entity Framework.");
+    alert("I used to live in a small town called Portales, NM for 2 years." +
+    " If I think about it now, I don't know how I was able to endure living" +
+    " there for even a day.");
 }
 else
 {
-    //Question 3_1
-    var resultSpecificLanguage = prompt("You said no. Could you tell me if you're looking for a programmer specializing" +
-    " in other than C# or python? Please answer y/n or yes/no.").toLowerCase();
-    if(resultSpecificLanguage === 'y' || resultSpecificLanguage === 'yes')
-    {
-        confirm("You said yes. Currently my language skills are limited only to C# and python.");
-    }
-    else
-    {
-        confirm("You said no. Great. I am a full stack web programmer in C# and Python.");
-    }
+    alert("I lived a small town called Portales, NM for 2 years while attending" +
+    " college in there. They sell only frozen fish there.");
 }
 
 //Question 4
-var resultYears = prompt("Are you looking for a programmer with more than" +
-"3 years of experience?").toLowerCase();
+var resultYears = prompt("Do you think I enjoy drinking beer more than wine?").toLowerCase();
+console.log("User selected: " + resultYears);
+
 if(resultYears === 'y' || resultYears === 'yes')
 {
-    confirm("I am sorry to hear that. I am looking for a junior programmer position.");
+    alert("You're correct. I like drinking beer than wine. For that reason" +
+    " I am fortunate that I live in Seattle.");
 
 }
 else
 {
-    confirm("Great. I am looking for a junior programmer level position.");
+    alert("Although Seattle offers a great wine and beer selections, I prefer" +
+    " drinking beer over wine.");
 
 }
 
 //Question 5
-var resultIntership = prompt("Does your company has an internship program?").toLowerCase();
-if(resultIntership === 'y' || resultIntership === 'yes')
+var resultInternship = prompt("Do you think I am a vegetarian?").toLowerCase();
+console.log("User selected: " + resultInternship);
+
+if(resultInternship === 'y' || resultInternship === 'yes')
 {
-    confirm("Great. Thank you for the information. I am also looking for an intership" +
-    " opportunity as well.");
+    alert("No. I love going out to tour a different sushi restaurant" +
+    " I love eating fresh raw fish.");
 }
 else
 {
-    confirm("I have less than 2 years of experience in coding. Maybe an intership" +
-    " is a great opportunity to prove my ability if you're looking for" +
-    " more experienced programmers.");
+    alert("Yes. It's hard for me to imagine eating only vegetable.");
 }
