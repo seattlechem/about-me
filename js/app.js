@@ -1,5 +1,6 @@
 'use strict';
 
+var noOfCorrectAnswer = 0;
 var userName = prompt('Welcome! Please enter your name.');
 alert('Hello ' + userName + '. Please answer all questions with y/n or yes/no.' +
 ' Several questions will be asked to find more about me.');
@@ -13,6 +14,7 @@ if(resultOlympian === 'y' || resultOlympian === 'yes')
   alert('I am a member of Pueget Sound Ice Skating Club and' +
   ' Several famous Olympians have trained in our club' +
   'including J. R. Celski and Apolo Ohno.');
+  noOfCorrectAnswer++;
 }
 else
 {
@@ -28,6 +30,7 @@ console.log('User\'s answer for Ski question: ' + resultInterest);
 if(resultInterest === 'y' || resultInterest === 'yes')
 {
   alert('I was a downhill skier representing my hometown province in Korea.');
+  noOfCorrectAnswer++;
 }
 else
 {
@@ -43,6 +46,7 @@ if(resultProject === 'y' || resultProject === 'yes')
   alert('I used to live in a small town called Portales, NM for 2 years.' +
   ' If I think about it now, I don\'t know how I was able to endure living' +
   ' there for even a day.');
+  noOfCorrectAnswer++;
 }
 else
 {
@@ -58,6 +62,7 @@ if(resultYears === 'y' || resultYears === 'yes')
 {
   alert('You\'re correct. I like drinking beer than wine. For that reason' +
   ' I am fortunate that I live in Seattle.');
+  noOfCorrectAnswer++;
 
 }
 else
@@ -75,6 +80,7 @@ if(resultInternship === 'y' || resultInternship === 'yes')
 {
   alert('No. I love going out to tour a different sushi restaurant' +
   ' I love eating fresh raw fish.');
+  noOfCorrectAnswer++;
 }
 else
 {
@@ -87,10 +93,10 @@ var chance = 0;
 while(chance < 4)
 {
   var resultGuess = parseInt(prompt('Can you gess what is the last number of my 5-digit zip code? Please answer only with numbers from 0 to 9'));
-  
   if(resultGuess === 6)
   {
     alert('Great. You got it right! The last number is 6');
+    noOfCorrectAnswer++;
     break;
   }
   else
@@ -98,7 +104,36 @@ while(chance < 4)
     chance++;
     var chancesleft = 4 - chance;
     alert('Sorry. You have ' + chancesleft + ' chance(s) left.');
-    
   }
 
+}
+
+//Question 7
+//Guessing a state
+var states = ['north carolina', 'new mexico', 'oregon'];
+var attempt;
+var i;
+for(attempt = 0; attempt < 6; attempt++)
+{
+  var userAnswer = prompt('Can you guess a state that I have lived besides Washington?').toLowerCase();
+  for(i = 0; i < states.length; i++)
+  {
+    if(userAnswer === states[i])
+    {
+      alert('You are correct. I have lived in North Cartolina, New Mexico, and Oregon besides Washington.');
+      var correct = true;
+      noOfCorrectAnswer++;
+      alert('You got ' + noOfCorrectAnswer + ' out of 7 questions correct, ' + userName + '! Better luck next time!');
+      break;}
+  }
+  if(correct === true)
+  {
+    break;
+  }
+  else
+  {
+    var attemptsLeft = 5 - attempt;
+    console.log(attemptsLeft);
+    alert('Sorry. You have ' + attemptsLeft + ' chance(s) left.');
+  }
 }
