@@ -1,57 +1,65 @@
 'use strict';
 
 var noOfCorrectAnswer = 0;
-var userName = prompt('Welcome! Please enter your name.');
-alert('Hello ' + userName + '. Please answer all questions with y/n or yes/no.' +
-' Several questions will be asked to find more about me.');
+function introduction() {
+  var userName = prompt('Welcome! Please enter your name.');
+  alert('Hello ' + userName + '. Please answer all questions with y/n or yes/no.' +
+  ' Several questions will be asked to find more about me.');
+}
 
 //Question 1
-var resultOlympian = prompt('Do you think I met an Olympian before?').toLowerCase();
-console.log('User\'s answer for Olympian question: ' + resultOlympian);
+function question1() {
+  var resultOlympian = prompt('Do you think I met an Olympian before?').toLowerCase();
+  console.log('User\'s answer for Olympian question: ' + resultOlympian);
 
-if(resultOlympian === 'y' || resultOlympian === 'yes')
-{
-  alert('I am a member of Pueget Sound Ice Skating Club and' +
-  ' Several famous Olympians have trained in our club' +
-  'including J. R. Celski and Apolo Ohno.');
-  noOfCorrectAnswer++;
-}
-else
-{
-  alert('You said no. I have been training everyweekends for' +
-  ' 2 hours on ice and 2 hours on dryland. Our ice skating club' +
-  ' has produced two former/current Olympian: J. R. Celski and Apolo Ohno');
+  if(resultOlympian === 'y' || resultOlympian === 'yes')
+  {
+    alert('I am a member of Pueget Sound Ice Skating Club and' +
+    ' Several famous Olympians have trained in our club' +
+    'including J. R. Celski and Apolo Ohno.');
+    noOfCorrectAnswer++;
+  }
+  else
+  {
+    alert('You said no. I have been training everyweekends for' +
+    ' 2 hours on ice and 2 hours on dryland. Our ice skating club' +
+    ' has produced two former/current Olympian: J. R. Celski and Apolo Ohno');
+  }
 }
 
 //Question 2
-var resultInterest = prompt('Do you think I ever compete in alpine ski racing before?').toLowerCase();
-console.log('User\'s answer for Ski question: ' + resultInterest);
+function question2() {
+  var resultInterest = prompt('Do you think I ever compete in alpine ski racing before?').toLowerCase();
+  console.log('User\'s answer for Ski question: ' + resultInterest);
 
-if(resultInterest === 'y' || resultInterest === 'yes')
-{
-  alert('I was a downhill skier representing my hometown province in Korea.');
-  noOfCorrectAnswer++;
-}
-else
-{
-  alert('I started skiing since I was seven years old.');
+  if(resultInterest === 'y' || resultInterest === 'yes')
+  {
+    alert('I was a downhill skier representing my hometown province in Korea.');
+    noOfCorrectAnswer++;
+  }
+  else
+  {
+    alert('I started skiing since I was seven years old.');
+  }
 }
 
 //Question 3
-var resultProject = prompt('Have you ever lived in New Mexico?').toLowerCase();
-console.log('User\'s answer for New Mexico question: ' + resultProject);
+function question3() {
+  var resultProject = prompt('Have you ever lived in New Mexico?').toLowerCase();
+  console.log('User\'s answer for New Mexico question: ' + resultProject);
 
-if(resultProject === 'y' || resultProject === 'yes')
-{
-  alert('I used to live in a small town called Portales, NM for 2 years.' +
-  ' If I think about it now, I don\'t know how I was able to endure living' +
-  ' there for even a day.');
-  noOfCorrectAnswer++;
-}
-else
-{
-  alert('I lived a small town called Portales, NM for 2 years while attending' +
-  ' college in there. They sell only frozen fish there.');
+  if(resultProject === 'y' || resultProject === 'yes')
+  {
+    alert('I used to live in a small town called Portales, NM for 2 years.' +
+    ' If I think about it now, I don\'t know how I was able to endure living' +
+    ' there for even a day.');
+    noOfCorrectAnswer++;
+  }
+  else
+  {
+    alert('I lived a small town called Portales, NM for 2 years while attending' +
+    ' college in there. They sell only frozen fish there.');
+  }
 }
 
 //Question 4
@@ -137,3 +145,8 @@ for(attempt = 0; attempt < 6; attempt++)
     alert('Sorry. You have ' + attemptsLeft + ' chance(s) left.');
   }
 }
+
+introduction();
+question1();
+question2();
+question3();
