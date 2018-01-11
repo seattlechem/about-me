@@ -105,6 +105,7 @@ function question5() {
 //guessing game which takes numeric input
 function question6 () {
   var chance = 0;
+  var chancesleft;
   while(chance < 4)
   {
     var resultGuess = parseInt(prompt('Can you gess what is the last number of my 5-digit zip code? Please answer only with numbers from 0 to 9'));
@@ -117,12 +118,23 @@ function question6 () {
     }
     else
     {
-      console.log('User guess is incorrect');
-      chance++;
-      var chancesleft = 4 - chance;
-      alert('Sorry. You have ' + chancesleft + ' chance(s) left.');
-    }
+      var difference = resultGuess - 6;
+      if(difference > 0)
+      {
+        console.log('User guess is too high');
+        chance++;
+        chancesleft = 4 - chance;
+        alert('Sorry. You guess is too high. You have ' + chancesleft + ' chance(s) left.');
 
+      }
+      else
+      {
+        console.log('User guess is too low');
+        chance++;
+        chancesleft = 4 - chance;
+        alert('Sorry. You guess is too high. You have ' + chancesleft + ' chance(s) left.');
+      }
+    }
   }
 }
 
