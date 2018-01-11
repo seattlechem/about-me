@@ -112,10 +112,12 @@ function question6 () {
     {
       alert('Great. You got it right! The last number is 6');
       noOfCorrectAnswer++;
+      console.log('Question 6: ' + resultGuess);
       break;
     }
     else
     {
+      console.log('User guess is incorrect');
       chance++;
       var chancesleft = 4 - chance;
       alert('Sorry. You have ' + chancesleft + ' chance(s) left.');
@@ -141,14 +143,18 @@ function question7() {
         var correct = true;
         noOfCorrectAnswer++;
         alert('You got ' + noOfCorrectAnswer + ' out of 7 questions correct, ' + userName + '! Better luck next time!');
-        break;}
+        console.log('Question 7: ' + userAnswer);
+        break;
+      }
     }
     if(correct === true)
     {
+      console.log('User got it right');
       break;
     }
     else
     {
+      console.log('User answer Incorrect');
       var attemptsLeft = 5 - attempt;
       console.log(attemptsLeft);
       alert('Sorry. You have ' + attemptsLeft + ' chance(s) left.');
