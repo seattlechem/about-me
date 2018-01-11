@@ -63,36 +63,40 @@ function question3() {
 }
 
 //Question 4
-var resultYears = prompt('Do you think I enjoy drinking beer more than wine?').toLowerCase();
-console.log('User\'s answer for Beer question: ' + resultYears);
+function question4() {
+  var resultYears = prompt('Do you think I enjoy drinking beer more than wine?').toLowerCase();
+  console.log('User\'s answer for Beer question: ' + resultYears);
 
-if(resultYears === 'y' || resultYears === 'yes')
-{
-  alert('You\'re correct. I like drinking beer than wine. For that reason' +
-  ' I am fortunate that I live in Seattle.');
-  noOfCorrectAnswer++;
+  if(resultYears === 'y' || resultYears === 'yes')
+  {
+    alert('You\'re correct. I like drinking beer than wine. For that reason' +
+    ' I am fortunate that I live in Seattle.');
+    noOfCorrectAnswer++;
 
-}
-else
-{
-  alert('Although Seattle offers a great wine and beer selections, I prefer' +
-  ' drinking beer over wine.');
+  }
+  else
+  {
+    alert('Although Seattle offers a great wine and beer selections, I prefer' +
+    ' drinking beer over wine.');
 
+  }
 }
 
 //Question 5
-var resultInternship = prompt('Do you think I am a vegetarian?').toLowerCase();
-console.log('User\'s answer for Vegetarian questiobn: ' + resultInternship);
+function question() {
+  var resultInternship = prompt('Do you think I am a vegetarian?').toLowerCase();
+  console.log('User\'s answer for Vegetarian questiobn: ' + resultInternship);
 
-if(resultInternship === 'y' || resultInternship === 'yes')
-{
-  alert('No. I love going out to tour a different sushi restaurant' +
-  ' I love eating fresh raw fish.');
-  noOfCorrectAnswer++;
-}
-else
-{
-  alert('Yes. It\'s hard for me to imagine eating only vegetable.');
+  if(resultInternship === 'y' || resultInternship === 'yes')
+  {
+    alert('No. I love going out to tour a different sushi restaurant' +
+    ' I love eating fresh raw fish.');
+    noOfCorrectAnswer++;
+  }
+  else
+  {
+    alert('Yes. It\'s hard for me to imagine eating only vegetable.');
+  }
 }
 
 //Question 6
@@ -150,3 +154,5 @@ introduction();
 question1();
 question2();
 question3();
+question4();
+question5();
