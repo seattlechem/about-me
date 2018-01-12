@@ -172,6 +172,7 @@ function question7() {
       alert('Sorry. You have ' + attemptsLeft + ' chance(s) left.');
     }
   }
+  alert('The states I have live: North Carolina, New Mexico, and Oregion');
 }
 
 introduction();
