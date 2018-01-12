@@ -1,7 +1,7 @@
 'use strict';
 
-var noOfCorrectAnswer = 0;
 var userName;
+var correctQuestion = [];
 
 function introduction() {
   userName = prompt('Welcome! Please enter your name.');
@@ -19,7 +19,7 @@ function question1() {
     alert('I am a member of Pueget Sound Ice Skating Club and' +
     ' Several famous Olympians have trained in our club' +
     'including J. R. Celski and Apolo Ohno.');
-    noOfCorrectAnswer++;
+    correctQuestion.push('Q1');
   }
   else
   {
@@ -37,7 +37,7 @@ function question2() {
   if(resultInterest === 'y' || resultInterest === 'yes')
   {
     alert('I was a downhill skier representing my hometown province in Korea.');
-    noOfCorrectAnswer++;
+    correctQuestion.push('Q2');
   }
   else
   {
@@ -55,7 +55,7 @@ function question3() {
     alert('I used to live in a small town called Portales, NM for 2 years.' +
     ' If I think about it now, I don\'t know how I was able to endure living' +
     ' there for even a day.');
-    noOfCorrectAnswer++;
+    correctQuestion.push('Q3');
   }
   else
   {
@@ -73,7 +73,7 @@ function question4() {
   {
     alert('You\'re correct. I like drinking beer than wine. For that reason' +
     ' I am fortunate that I live in Seattle.');
-    noOfCorrectAnswer++;
+    correctQuestion.push('Q4');
 
   }
   else
@@ -93,7 +93,7 @@ function question5() {
   {
     alert('No. I love going out to tour a different sushi restaurant' +
     ' I love eating fresh raw fish.');
-    noOfCorrectAnswer++;
+    correctQuestion.push('Q5');
   }
   else
   {
@@ -112,7 +112,8 @@ function question6 () {
     if(resultGuess === 6)
     {
       alert('Great. You got it right! The last number is 6');
-      noOfCorrectAnswer++;
+
+      correctQuestion.push('Q6');
       console.log('Question 6: ' + resultGuess);
       break;
     }
@@ -151,17 +152,16 @@ function question7() {
     {
       if(userAnswer === states[i])
       {
-        alert('You are correct. I have lived in North Cartolina, New Mexico, and Oregon besides Washington.');
         var correct = true;
-        noOfCorrectAnswer++;
-        alert('You got ' + noOfCorrectAnswer + ' out of 7 questions correct, ' + userName + '! Better luck next time!');
+        correctQuestion.push('Q7');
         console.log('Question 7: ' + userAnswer);
         break;
       }
     }
     if(correct === true)
     {
-      console.log('User got it right');
+      console.log('User got it right. This is 2nd break.');
+      alert('Correct!');
       break;
     }
     else
@@ -172,7 +172,21 @@ function question7() {
       alert('Sorry. You have ' + attemptsLeft + ' chance(s) left.');
     }
   }
-  alert('The states I have live: North Carolina, New Mexico, and Oregion');
+  alert('The states I have lived: North Carolina, New Mexico, and Oregion');
+}
+function finalCheck() {
+  if (correctQuestion.length === 0)
+  {
+    alert('Sorry. You didn\'t get any question right ' + userName + '! Better luck next time!');
+  }
+  else
+  {
+    var listOfCorrectQuestions = correctQuestion.toString();
+    alert('You got ' + correctQuestion.length + ' out of 7 questions correct.' +
+'Your answer for following questions are correct: ' + listOfCorrectQuestions + '\n' +
+ userName + '! Better luck next time!');
+
+  }
 }
 
 introduction();
@@ -183,3 +197,6 @@ question4();
 question5();
 question6();
 question7();
+finalCheck();
+
+
